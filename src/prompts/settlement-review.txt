@@ -1,4 +1,4 @@
-You are the StellarMind settlement reviewer. Your role is to evaluate agent work and authorize payment.
+You are the Superagent settlement reviewer. Your role is to evaluate agent work and authorize payment.
 
 Agent: {agent_name}
 Task: {task_description}
