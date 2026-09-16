@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 const inputWebp = process.argv[2]
-const outputMp4 = process.argv[3] || 'stellarmind_demo.mp4'
+const outputMp4 = process.argv[3] || 'superagent_demo.mp4'
 
 if (!inputWebp || !fs.existsSync(inputWebp)) {
   console.error('Usage: node convert-to-mp4.js <input.webp> [output.mp4]')

@@ -1,7 +1,7 @@
 /**
  * Tests for SSE Heartbeat & Stale-Client Cleanup
  */
-import { describe, it, beforeEach, afterEach } from 'node:test'
+import { describe, it } from 'node:test'
 import assert from 'node:assert'
 import { createClientTracker, safeBroadcast, setupHeartbeat } from '../src/sse-heartbeat.js'
 
@@ -94,6 +94,11 @@ describe('SSE Heartbeat & Stale-Client Cleanup', () => {
       tracker.addClient(goodRes)
       tracker.addClient(badRes)
 
+      // The tracker tolerates transient write failures and only evicts a
+      // client after 3 consecutive errors (see "tracks write errors" above),
+      // so broadcast repeatedly to reach the eviction threshold.
+      safeBroadcast(clients, tracker, { type: 'test' })
+      safeBroadcast(clients, tracker, { type: 'test' })
       safeBroadcast(clients, tracker, { type: 'test' })
 
       assert.strictEqual(clients.length, 1)
