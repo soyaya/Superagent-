@@ -1,5 +1,5 @@
 /**
- * Circuit Breaker Module — StellarMind
+ * Circuit Breaker Module — Superagent
  * Protects against unstable upstream model providers.
  * Stellar Wave bounty #23
  */

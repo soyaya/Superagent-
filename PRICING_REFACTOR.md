@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the refactoring of hardcoded pricing configuration in StellarMind to use a
+This document describes the refactoring of hardcoded pricing configuration in Superagent to use a
 centralized, validated pricing configuration system. This ensures a single source of truth for all
 premium endpoint pricing.
 
@@ -571,7 +571,7 @@ The `/api/status` endpoint now includes detailed pricing information:
 
 ```json
 {
-  "name": "StellarMind",
+  "name": "Superagent",
   "version": "1.0.0",
   "description": "AI Agent Marketplace with x402 Micropayments on Stellar",
   "status": "online",

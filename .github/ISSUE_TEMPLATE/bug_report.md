@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a bug to help improve StellarMind
+about: Report a bug to help improve Superagent
 title: '[BUG] '
 labels: ['bug', 'triage']
 assignees: []
@@ -28,7 +28,7 @@ If applicable, add screenshots.
 - OS: [e.g. Windows, macOS, Linux]
 - Browser: [e.g. Chrome, Firefox]
 - Node.js version: [e.g. 20.11]
-- StellarMind version: [e.g. 1.0.0]
+- Superagent version: [e.g. 1.0.0]
 
 ### Additional Context
 Add any other context about the problem here.

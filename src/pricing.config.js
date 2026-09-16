@@ -1,5 +1,5 @@
 /**
- * Centralized Pricing Configuration for StellarMind Premium Endpoints
+ * Centralized Pricing Configuration for Superagent Premium Endpoints
  *
  * This is the single source of truth for all premium endpoint pricing.
  * Changes here automatically propagate to:

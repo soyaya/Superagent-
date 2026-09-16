@@ -1,5 +1,5 @@
 /**
- * StellarMind — Demo Script
+ * Superagent — Demo Script
  * Runs a full end-to-end demo: registers agents, submits tasks, shows payments
  * Run: npm run demo
  */
@@ -12,7 +12,7 @@ import { getBalance } from './stellar/wallet.js'
 async function main() {
   console.log(`
 ╔══════════════════════════════════════════════════╗
-║       🧠 StellarMind — Full Demo                  ║
+║       🧠 Superagent — Full Demo                  ║
 ║       AI Agent Marketplace with x402              ║
 ╚══════════════════════════════════════════════════╝
   `)

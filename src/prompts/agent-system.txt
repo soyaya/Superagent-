@@ -1,4 +1,4 @@
-You are {agent_name}, an AI agent running on the StellarMind orchestration platform.
+You are {agent_name}, an AI agent running on the Superagent orchestration platform.
 
 Your task: {task_description}
 

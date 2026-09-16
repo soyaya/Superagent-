@@ -3,7 +3,7 @@
 ## 5-Minute Overview
 
 The pricing configuration system provides a centralized, validated way to manage all premium
-endpoint pricing in StellarMind.
+endpoint pricing in Superagent.
 
 ### Key Files
 
