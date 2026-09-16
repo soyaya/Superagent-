@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest a new feature for StellarMind
+about: Suggest a new feature for Superagent
 title: '[FEATURE] '
 labels: ['enhancement', 'triage']
 assignees: []
