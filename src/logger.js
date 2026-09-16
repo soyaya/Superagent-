@@ -53,6 +53,9 @@ function emit(level, message, fields = {}) {
 }
 
 export const logger = {
+  debug(message, fields) {
+    emit('debug', message, fields)
+  },
   info(message, fields) {
     emit('info', message, fields)
   },

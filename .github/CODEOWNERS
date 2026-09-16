@@ -2,13 +2,13 @@
 # Automatically request reviews from the right people
 
 # Core infrastructure
-*       @Flamki
+*       @soyaya
 
 # Documentation
-*.md    @Flamki
-docs/   @Flamki
+*.md    @soyaya
+docs/   @soyaya
 
 # CI/CD workflows
-.github/workflows/   @Flamki
+.github/workflows/   @soyaya
 
 # Generated for Stellar Wave bounty #41

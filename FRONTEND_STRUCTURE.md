@@ -1,4 +1,4 @@
-# StellarMind Frontend Architecture
+# Superagent Frontend Architecture
 
 ## Overview
 

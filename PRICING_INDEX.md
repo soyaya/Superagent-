@@ -2,7 +2,7 @@
 
 ## 📋 Overview
 
-This index provides a complete guide to the pricing configuration refactoring for StellarMind. All
+This index provides a complete guide to the pricing configuration refactoring for Superagent. All
 premium endpoint pricing has been externalized from hardcoded values in `src/server.js` to a
 centralized, validated configuration system.
 

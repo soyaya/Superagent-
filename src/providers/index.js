@@ -1,5 +1,5 @@
 /**
- * Provider Abstraction Module — StellarMind
+ * Provider Abstraction Module — Superagent
  * Multi-LLM provider support with unified interface.
  * Stellar Wave bounty #25
  */
@@ -29,7 +29,7 @@ class ProviderInterface {
   }
 
   /** Execute a chat completion request */
-  async chat(messages, options = {}) {
+  async chat(messages, _options = {}) {
     throw new Error('Not implemented')
   }
 

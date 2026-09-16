@@ -559,7 +559,7 @@ app.get('/api/status', (req, res) => {
     .map((info) => `${info.endpoint} (${info.price})`)
 
   res.json({
-    name: 'StellarMind',
+    name: 'Superagent',
     version: '1.0.0',
     description: 'AI Agent Marketplace with x402 Micropayments on Stellar',
     status: 'online',
@@ -626,7 +626,7 @@ const PORT = config.port
 app.listen(PORT, () => {
   console.log(`
 ╔══════════════════════════════════════════════════╗
-║         🧠 StellarMind — AI Agent Marketplace     ║
+║         🧠 Superagent — AI Agent Marketplace     ║
 ║         x402 Micropayments on Stellar Testnet     ║
 ╠══════════════════════════════════════════════════╣
 ║  Dashboard:  http://localhost:${PORT}               ║

@@ -11,7 +11,7 @@
     {"type": "ci", "section": "CI/CD"},
     {"type": "chore", "section": "Chores"}
   ],
-  "commitUrlFormat": "https://github.com/Flamki/stellarmind/commit/{{hash}}",
-  "compareUrlFormat": "https://github.com/Flamki/stellarmind/compare/{{previousTag}}...{{currentTag}}",
-  "issueUrlFormat": "https://github.com/Flamki/stellarmind/issues/{{id}}"
+  "commitUrlFormat": "https://github.com/soyaya/Superagent-/commit/{{hash}}",
+  "compareUrlFormat": "https://github.com/soyaya/Superagent-/compare/{{previousTag}}...{{currentTag}}",
+  "issueUrlFormat": "https://github.com/soyaya/Superagent-/issues/{{id}}"
 }
