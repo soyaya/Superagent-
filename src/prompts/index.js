@@ -1,5 +1,5 @@
 /**
- * Prompt Template Loader — StellarMind
+ * Prompt Template Loader — Superagent
  * Loads and renders versioned prompt templates.
  * Stellar Wave bounty #24
  */

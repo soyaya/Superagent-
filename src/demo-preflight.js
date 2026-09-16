@@ -42,7 +42,7 @@ async function verifyOnChainTransaction(txHash) {
 async function main() {
   const failures = []
 
-  console.log('\nStellarMind Preflight - Recording Readiness\n')
+  console.log('\nSuperagent Preflight - Recording Readiness\n')
   console.log(`Network: ${config.network}`)
   console.log(`Server:  ${SERVER_BASE_URL}`)
   console.log('')

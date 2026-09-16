@@ -30,6 +30,15 @@ jobs:
       - name: Budget guardrail tests
         run: npm run test:budget
 
+      - name: Pricing tests
+        run: npm run test:pricing
+
+      - name: Security middleware tests
+        run: npm run test:security
+
+      - name: SSE heartbeat tests
+        run: npm run test:sse
+
   smoke:
     runs-on: ubuntu-latest
     timeout-minutes: 10

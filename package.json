@@ -1,5 +1,5 @@
 {
-  "name": "stellarmind",
+  "name": "superagent",
   "version": "1.0.0",
   "main": "src/server.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "record:narrated": "node src/render-narrated-demo.js",
     "setup": "node src/setup-wallets.js",
     "setup:usdc": "node src/setup-usdc.js",
-    "test": "node src/agents/settlement-header.test.js && node tests/orchestrator.budget.test.js && node tests/premium-endpoints.integration.test.js",
+    "test": "node src/agents/settlement-header.test.js && node tests/orchestrator.budget.test.js && node tests/premium-endpoints.integration.test.js && node tests/pricing.integration.test.js && node tests/pricing.validator.test.js && node tests/security.integration.test.js && node --test tests/sse-heartbeat.test.js",
     "test:validation": "node tests/api.validation.test.js",
     "smoke": "node tests/smoke.test.js",
     "lint": "eslint . --ext .js,.mjs,.cjs",
@@ -24,6 +24,9 @@
     "test:parser": "node src/agents/settlement-header.test.js",
     "test:budget": "node tests/orchestrator.budget.test.js",
     "test:premium": "node tests/premium-endpoints.integration.test.js",
+    "test:pricing": "node tests/pricing.integration.test.js && node tests/pricing.validator.test.js",
+    "test:security": "node tests/security.integration.test.js",
+    "test:sse": "node --test tests/sse-heartbeat.test.js",
     "test:demo": "node src/demo.js",
     "prepare": "husky"
   },
@@ -35,7 +38,7 @@
     "micropayments",
     "marketplace"
   ],
-  "author": "StellarMind Team",
+  "author": "Superagent Team",
   "license": "MIT",
   "description": "AI Agent Marketplace with x402 Micropayments on Stellar — Claude-powered agents that buy, sell, and earn autonomously",
   "type": "module",

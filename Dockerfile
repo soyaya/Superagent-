@@ -1,4 +1,4 @@
-# StellarMind Docker Image
+# Superagent Docker Image
 # Multi-stage build for optimal image size
 
 FROM node:20-alpine AS builder
@@ -18,8 +18,8 @@ FROM node:20-alpine AS runtime
 WORKDIR /app
 
 # Create non-root user
-RUN addgroup -g 1001 stellarmind && \
-    adduser -u 1001 -G stellarmind -s /bin/sh -D stellarmind
+RUN addgroup -g 1001 superagent && \
+    adduser -u 1001 -G superagent -s /bin/sh -D superagent
 
 # Copy from builder
 COPY --from=builder /app/node_modules ./node_modules
@@ -35,7 +35,7 @@ EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
     CMD wget --no-verbose --tries=1 --spider http://localhost:3000/health || exit 1
 
-USER stellarmind
+USER superagent
 
 CMD ["node", "src/server.js"]
 

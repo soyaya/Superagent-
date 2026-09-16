@@ -1,16 +1,37 @@
-# StellarMind
+# Superagent
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-0f172a.svg)](LICENSE)
 ![Node](https://img.shields.io/badge/node-%3E%3D20.19-0f172a.svg)
 ![Stellar](https://img.shields.io/badge/network-Stellar%20Testnet-0f172a.svg)
 ![x402](https://img.shields.io/badge/payments-x402-0f172a.svg)
 
-Multi-agent AI marketplace on Stellar Testnet with x402-protected premium endpoints, budget
-guardrails, and on-chain payment verification.
+Superagent is a working multi-agent AI marketplace that settles real payments on Stellar. Claude-
+powered agents call each other through metered, `x402`-protected endpoints, and every paid step
+resolves to a Stellar transaction you can look up on Stellar Expert — not a mocked receipt. The full
+loop — orchestration, budget enforcement, payment challenge/response, and on-chain settlement — runs
+end to end today, backed by a passing test suite and CI.
+
+## Why Stellar
+
+Agent-to-agent commerce needs payments that are fast, cheap, and verifiable at the volume agents
+actually operate at — many small calls, not a few large ones. Stellar fits that shape directly:
+
+- **Sub-5-second finality** keeps an orchestrated multi-agent run feeling synchronous instead of
+  stalling on payment confirmation.
+- **Fractions-of-a-cent fees** make per-call micropayments (`$0.01`-`$0.05` in this repo) viable — a
+  card network or L1 gas fee would exceed the price of the API call itself.
+- **Native USDC via trustlines** gives agents a stable unit of account for pricing and budgets
+  without a bridge or wrapped-asset detour.
+- **A public ledger and block explorer** (Stellar Expert) mean every settled call is independently
+  verifiable, which is what makes "payment enforced by protocol, not trust alone" a real property
+  instead of a slogan.
+- **A friendly, well-funded Testnet** means the whole flow above — wallets, trustlines, payments,
+  proofs — can be exercised end to end without spending real money, which is exactly the environment
+  this repo is built and tested against.
 
 ## Why This Repo Exists
 
-StellarMind demonstrates a production-style pattern for agent commerce:
+Superagent demonstrates a production-style pattern for agent commerce:
 
 - agents can call each other through paid APIs
 - payment is enforced by protocol (`x402`), not trust alone
@@ -51,8 +72,8 @@ For a deeper, standalone walkthrough — components plus the request, payment, a
 ### 1) Clone and install
 
 ```bash
-git clone https://github.com/Flamki/stellarmind.git
-cd stellarmind
+git clone https://github.com/soyaya/Superagent-.git
+cd Superagent-
 nvm install
 nvm use
 npm install
@@ -139,7 +160,7 @@ Open `http://localhost:3001`.
 
 > [!NOTE] **Mobile UI Limitations**: The dashboard is currently optimized for desktop viewports.
 > Mobile responsiveness improvements are planned (see
-> [#34](https://github.com/Flamki/stellarmind/issues/34)), but elements like the sidebar navigation
+> [#34](https://github.com/soyaya/Superagent-/issues/34)), but elements like the sidebar navigation
 > are currently hidden on screens narrower than 768px. For the best experience, we recommend using a
 > desktop browser with a viewport width of 1024px or wider during development and testing.
 
@@ -189,7 +210,7 @@ The orchestrator uses `INTERNAL_BASE_URL` for its paid internal calls to `/api/p
 - Local development: leave `INTERNAL_BASE_URL` unset and run `npm run dev`
 - Single container / Docker Compose: set `INTERNAL_BASE_URL=http://<service-name>:3001`
 - Remote or reverse-proxied deployment: set `INTERNAL_BASE_URL` to the server origin the
-  orchestrator can actually reach, for example `https://stellarmind.example.com`
+  orchestrator can actually reach, for example `https://superagent.example.com`
 
 Examples:
 
@@ -199,16 +220,16 @@ PORT=3001
 
 # Docker Compose
 PORT=3001
-INTERNAL_BASE_URL=http://stellarmind:3001
+INTERNAL_BASE_URL=http://superagent:3001
 
 # Remote deployment behind HTTPS
 PORT=3001
-INTERNAL_BASE_URL=https://stellarmind.example.com
+INTERNAL_BASE_URL=https://superagent.example.com
 ```
 
 ## Operational Health Checks
 
-StellarMind exposes lightweight endpoints for deployment tooling and load balancer probes:
+Superagent exposes lightweight endpoints for deployment tooling and load balancer probes:
 
 - `GET /healthz`
   - returns `200` and `status: ok` when the process is alive
@@ -246,7 +267,7 @@ Example `/readyz` response:
 
 ## Audit Run History
 
-StellarMind persists orchestration and payment audit history.
+Superagent persists orchestration and payment audit history.
 
 - `GET /api/runs?limit=20`
   - returns recent runs across restarts when `RUN_HISTORY_STORAGE=file`
@@ -361,16 +382,16 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR.
 
 MIT. See [LICENSE](LICENSE).
 
-## 🚀 Enhanced by Bounty Hunter
+## Project Status
 
-### Quick Start
+Superagent is under active development on Stellar Testnet. What's proven working end to end:
 
-```bash
-git clone https://github.com/Flamki/stellarmind.git
-cd stellarmind
-# Follow instructions above
-```
+- orchestration, budget enforcement, and `x402` payment challenge/response against live
+  `/api/premium/*` endpoints
+- Stellar settlement with transaction hashes that resolve on Stellar Expert
+- a passing unit, integration, security, and smoke test suite, enforced in CI on every push and pull
+  request (`.github/workflows/ci.yml`, `test.yml`, `lint.yml`)
+- ESLint, Prettier, and Markdown lint all clean across the repository
 
-### CI Status
-
-Automated testing and linting configured via GitHub Actions.
+See [CHANGELOG.md](CHANGELOG.md) for release history and the
+[issue tracker](https://github.com/soyaya/Superagent-/issues) for what's actively being worked on.
