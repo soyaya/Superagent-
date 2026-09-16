@@ -1,5 +1,5 @@
 /**
- * Audit History Module — StellarMind
+ * Audit History Module — Superagent
  * Persists orchestration and payment events for audit history.
  * Stellar Wave bounty #26
  */
@@ -99,7 +99,7 @@ class AuditLogger {
             if (entityId && entry.entityId !== entityId) continue
             results.push(entry)
             if (results.length >= limit) return results
-          } catch (_) {
+          } catch {
             /* skip malformed lines */
           }
         }
