@@ -2,7 +2,7 @@
 
 ## Overview
 
-Successfully refactored the Stellarmind API to externalize hardcoded pricing configuration, creating
+Successfully refactored the Superagent API to externalize hardcoded pricing configuration, creating
 a centralized, validated pricing system that serves as a single source of truth for all premium
 endpoint pricing.
 

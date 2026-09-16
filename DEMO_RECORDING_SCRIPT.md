@@ -1,4 +1,4 @@
-# StellarMind Winning Demo Script (2:30 to 3:00)
+# Superagent Winning Demo Script (2:30 to 3:00)
 
 This is the judge-facing runbook: problem first, evidence second, architecture close.
 

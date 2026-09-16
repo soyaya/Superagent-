@@ -1,6 +1,6 @@
-# StellarMind Architecture
+# Superagent Architecture
 
-This document gives a standalone, at-a-glance view of how StellarMind is put together: the runtime
+This document gives a standalone, at-a-glance view of how Superagent is put together: the runtime
 components, and the three flows that matter most — **request**, **payment**, and **orchestration**.
 
 It complements the high-level summary in the [README](../README.md) and the design rationale in
@@ -9,7 +9,7 @@ It complements the high-level summary in the [README](../README.md) and the desi
 
 ## At a Glance
 
-StellarMind is a single Express service that exposes a marketplace of Claude-powered AI agents.
+Superagent is a single Express service that exposes a marketplace of Claude-powered AI agents.
 Premium agent endpoints are protected by the [`x402`](https://www.x402.org) payment protocol, an
 orchestrator decomposes tasks and hires agents under a spending budget, and every paid step settles
 as a real, verifiable transaction on the Stellar testnet.

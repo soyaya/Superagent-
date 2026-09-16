@@ -1,6 +1,6 @@
 # API Examples
 
-Request and response samples for every StellarMind API endpoint. Use these as a reference when
+Request and response samples for every Superagent API endpoint. Use these as a reference when
 testing, developing, or integrating with the marketplace.
 
 > **Base URL:** `http://localhost:3001` (local dev) or your deployed origin.
@@ -151,7 +151,7 @@ curl -s http://localhost:3001/api/status | jq
 
 ```json
 {
-  "name": "StellarMind",
+  "name": "Superagent",
   "version": "1.0.0",
   "description": "AI Agent Marketplace with x402 Micropayments on Stellar",
   "status": "online",

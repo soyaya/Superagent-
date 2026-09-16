@@ -1,8 +1,8 @@
-# Contributing to StellarMind
+# Contributing to Superagent
 
 ## Architecture Overview
 
-StellarMind uses a layered architecture where AI agents operate as autonomous services that charge
+Superagent uses a layered architecture where AI agents operate as autonomous services that charge
 for their work via the x402 payment protocol on Stellar.
 
 ### Payment Flow
@@ -159,14 +159,14 @@ Wait for a maintainer to assign it to you. This prevents two people solving the 
 Fork the repo on GitHub, then clone your fork locally:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/stellarmind.git
-cd stellarmind
+git clone https://github.com/YOUR_USERNAME/Superagent-.git
+cd Superagent-
 ```
 
 Add the original repo as `upstream`:
 
 ```bash
-git remote add upstream https://github.com/Flamki/stellarmind.git
+git remote add upstream https://github.com/soyaya/Superagent-.git
 ```
 
 ### 3. Create a branch

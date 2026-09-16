@@ -1,5 +1,5 @@
 [[SCENE:app_load]]
-This is StellarMind, live.
+This is Superagent, live.
 
 [[SCENE:dashboard_intro]]
 Problem: AI tools still cannot pay each other safely per task.
@@ -31,4 +31,4 @@ Teams can scale automation without losing financial control.
 From the Transactions page, we open another hash to verify the same proof flow from a second entry.
 
 [[SCENE:close]]
-StellarMind delivers practical agent commerce: clear pricing, budget safety, live execution, and public payment proof.
+Superagent delivers practical agent commerce: clear pricing, budget safety, live execution, and public payment proof.
