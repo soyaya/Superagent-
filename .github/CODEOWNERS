@@ -1,0 +1,14 @@
+# Code Owners
+# Automatically request reviews from the right people
+
+# Core infrastructure
+*       @soyaya
+
+# Documentation
+*.md    @soyaya
+docs/   @soyaya
+
+# CI/CD workflows
+.github/workflows/   @soyaya
+
+# Generated for Stellar Wave bounty #41

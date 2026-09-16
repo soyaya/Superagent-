@@ -1,5 +1,5 @@
 {
-  "name": "stellarmind",
+  "name": "superagent",
   "version": "1.0.0",
   "main": "src/server.js",
   "scripts": {
@@ -12,7 +12,23 @@
     "record:narrated": "node src/render-narrated-demo.js",
     "setup": "node src/setup-wallets.js",
     "setup:usdc": "node src/setup-usdc.js",
-    "test": "node src/demo.js"
+    "test": "node src/agents/settlement-header.test.js && node tests/orchestrator.budget.test.js && node tests/premium-endpoints.integration.test.js && node tests/pricing.integration.test.js && node tests/pricing.validator.test.js && node tests/security.integration.test.js && node --test tests/sse-heartbeat.test.js",
+    "test:validation": "node tests/api.validation.test.js",
+    "smoke": "node tests/smoke.test.js",
+    "lint": "eslint . --ext .js,.mjs,.cjs",
+    "lint:fix": "eslint . --ext .js,.mjs,.cjs --fix",
+    "lint:md": "markdownlint-cli2",
+    "lint:md:fix": "markdownlint-cli2 --fix",
+    "format": "prettier --write \"**/*.{js,md,html,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{js,md,html,yaml,yml}\"",
+    "test:parser": "node src/agents/settlement-header.test.js",
+    "test:budget": "node tests/orchestrator.budget.test.js",
+    "test:premium": "node tests/premium-endpoints.integration.test.js",
+    "test:pricing": "node tests/pricing.integration.test.js && node tests/pricing.validator.test.js",
+    "test:security": "node tests/security.integration.test.js",
+    "test:sse": "node --test tests/sse-heartbeat.test.js",
+    "test:demo": "node src/demo.js",
+    "prepare": "husky"
   },
   "keywords": [
     "stellar",
@@ -22,7 +38,7 @@
     "micropayments",
     "marketplace"
   ],
-  "author": "StellarMind Team",
+  "author": "Superagent Team",
   "license": "MIT",
   "description": "AI Agent Marketplace with x402 Micropayments on Stellar — Claude-powered agents that buy, sell, and earn autonomously",
   "type": "module",
@@ -32,14 +48,33 @@
     "@x402/core": "^2.9.0",
     "@x402/express": "^2.9.0",
     "@x402/fetch": "^2.13.0",
-    "@x402/stellar": "^2.9.0",
+    "@x402/stellar": "^2.14.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "puppeteer": "^19.0.0",
-    "puppeteer-screen-recorder": "^3.0.6"
+    "playwright": "^1.59.1"
   },
   "devDependencies": {
-    "playwright": "^1.59.1"
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.1.0",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "markdownlint-cli2": "^0.23.2",
+    "prettier": "^3.8.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write"
+    ],
+    "*.{json,yml,yaml}": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write",
+      "markdownlint-cli2 --fix"
+    ]
   }
 }

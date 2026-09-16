@@ -1,4 +1,4 @@
-# StellarMind Winning Demo Script (2:30 to 3:00)
+# Superagent Winning Demo Script (2:30 to 3:00)
 
 This is the judge-facing runbook: problem first, evidence second, architecture close.
 
@@ -20,6 +20,7 @@ This is the judge-facing runbook: problem first, evidence second, architecture c
 8. Close (10s): return to API Status then Transactions to reinforce architecture + proof.
 
 Note:
+
 - The recorder now keeps proof clicks in the same browser tab (no pop-out tab switching).
 
 ## 3) Voiceover Script Source
