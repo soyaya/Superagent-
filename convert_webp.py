@@ -2,8 +2,8 @@ from PIL import Image
 import cv2
 import numpy as np
 
-input_path = r"C:\Users\bbook\.gemini\antigravity\brain\5490372b-b9a8-4ed5-9246-dc7f6c164b64\stellarmind_fixed_x402_1776010909176.webp"
-output_path = r"C:\Users\bbook\Desktop\stellar\stellarmind_fixed_demo.mp4"
+input_path = r"C:\Users\bbook\.gemini\antigravity\brain\5490372b-b9a8-4ed5-9246-dc7f6c164b64\Superagent_fixed_x402_1776010909176.webp"
+output_path = r"C:\Users\bbook\Desktop\stellar\Superagent_fixed_demo.mp4"
 
 print("Opening WebP...")
 img = Image.open(input_path)
